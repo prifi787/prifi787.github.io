@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Resume Page -->
+    <div class="resume-container" id="resumePage" style="display: none;">
+        <div class="profile-section">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>PRIFI K J</h1>
+            <p>Student</p>
+            <p class="profile-description">
+                As a passionate and motivated AI/ML Engineer, I am eager to apply my academic knowledge and hands-on experience in machine learning and artificial intelligence to solve real-world challenges.
+            </p>
+            <div class="contact-info">
+                <p>📞 +91 7019139787</p>
+                <p>📧 prifikj7@gmail.com</p>
+                <p>📍 Theppagodu, Sagar(tq), Shimoga (d)</p>
+            </div>
+        </div>
+        <div class="details-section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>10th</strong> - St Joseph's High school, Sagar</li>
+                <li><strong>PUC</strong> - Govt PU college, Baruru</li>
+                <li><strong>B.E (AIML)</strong> - PES Institute of Technology, Shivamogga</li>
+            </ul>
+            <h2>Language</h2>
+            <ul>
+                <li>English</li>
+                <li>Kannada</li>
+                <li>Hindi</li>
+                <li>Malayalam</li>
+                <li>Tamil</li>
+            </ul>
+            <h2>Computer Skills</h2>
+            <ul>
+                <li>Text processor</li>
+                <li>Spreadsheet</li>
+                <li>Slide presentation</li>
+            </ul>
+            <h2>Certifications</h2>
+            <ul>
+                <li>MongoDB</li>
+                <li>Introduction to Python</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle login transition
+        const loginForm = document.getElementById("loginForm");
+        const loginPage = document.getElementById("loginPage");
+        const resumePage = document.getElementById("resumePage");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            loginPage.style.display = "none";
+            resumePage.style.display = "flex";
+        });
+    </script>
+</body>
+</html>
